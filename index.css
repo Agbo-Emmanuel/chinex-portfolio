@@ -115,7 +115,7 @@ body{
     font-size: 18px;
     line-height: 28px;
 }
-.hero_item_container > button{
+.hero_item_container > a > button{
     width: 40%;
     padding: 16px 0px;
     background-color: rgba(242, 209, 21, 0.965);
