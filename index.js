@@ -108,3 +108,55 @@ bookMeLink.addEventListener('click', () => {
     menu.classList.remove('visible');
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation has been triggered
+            }
+        });
+    });
+
+    // Select the element to be observed
+    const fadeInElement = document.querySelector('.fade_in_left');
+    observer.observe(fadeInElement);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation has been triggered
+            }
+        });
+    });
+
+    // Select the element to be observed
+    const fadeInElement = document.querySelector('.fade_in_right');
+    observer.observe(fadeInElement);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation has been triggered
+            }
+        });
+    });
+
+    // Select all elements to be observed
+    const fadeInElements = document.querySelectorAll('.fade_in_up');
+    
+    // Observe each element individually
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
